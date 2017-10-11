@@ -1,6 +1,7 @@
 package com.example.navadroid.androidonclickevent;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,8 +15,7 @@ public class Option2Activity extends AppCompatActivity {
 
     private EditText etInput;
     private TextView tvOutput;
-//    private Button btnProcess;
-
+    private Button btnBack,btnNext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +28,8 @@ public class Option2Activity extends AppCompatActivity {
     private void bindView(){
         etInput = (EditText) findViewById(R.id.et_input_2);
         tvOutput = (TextView) findViewById(R.id.tv_body_2);
+        btnBack = (Button)findViewById(R.id.btn_back);
+        btnNext = (Button)findViewById(R.id.btn_next);
     }
 
     // To set onClickListener to "each" view
@@ -41,6 +43,21 @@ public class Option2Activity extends AppCompatActivity {
                 hideKeyboardInput(v);
             }
         });
+        findViewById(R.id.btn_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Option1Activity.class);
+                startActivity(i);
+            }
+        });
+        findViewById(R.id.btn_next).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Option3Activity.class);
+                startActivity(i);
+            }
+        });
+
     }
 
     // To greet the user
