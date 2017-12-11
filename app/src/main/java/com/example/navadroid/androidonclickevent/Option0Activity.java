@@ -22,6 +22,11 @@ public class Option0Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option0);
         bindView();
+//        etInput = (EditText) findViewById(R.id.et_input_0);
+//        tvOutput = (TextView) findViewById(R.id.tv_body_0);
+//        btnProcess = (Button) findViewById(R.id.btn_process_0);
+//        btnBack = (Button) findViewById(R.id.btn_back);
+//        btnNext = (Button) findViewById(R.id.btn_next);
     }
 
     // To bind views to this activity
